@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+    <div class="container">
+        <h1><%= htmlWebpackPlugin.options.title %></h1>
+        <div class="search">
+            <input type="text">
+            <button>&#x3e;</button>
+        </div>
+        <div class="information">
+            <div>
+                <p>ip address</p>
+                <h2>192.212.174.101</h2>
+            </div>
+            <hr>
+            <div>
+                <p>location</p>
+                <h2>Brooklyn, NY 10001</h2>
+            </div>
+            <hr>
+            <div>
+                <p>timezon</p>
+                <h2>UTC -05:00</h2>
+            </div>
+            <hr>
+            <div>
+                <p>isp</p>
+                <h2>SpaceX Starlink</h2>
+            </div>
+        </div>
+        <div id="map"></div>
+    </div>
+</body>
+</html>
