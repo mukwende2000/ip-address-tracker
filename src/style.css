@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+body {
+    background-color: rgb(64, 64, 240);
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -17,6 +19,7 @@ h1 {
     display: flex;
     align-items: center;
     margin-block: 1rem;
+    margin: 1rem 0;
     /* width: 50%;
     max-width: 70%; */
 }
@@ -51,7 +54,7 @@ button {
 }
 .information {
     background-color: #fff;
-    padding: 1.5rem;
+    padding: 3rem .5rem;
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -60,6 +63,9 @@ button {
     gap: 30px;
     width: 70%;
     max-width: 90%; 
+    position: relative;
+    top: 5rem;
+    z-index: 100;
 }
 .information p {
     text-transform: uppercase;
@@ -80,7 +86,8 @@ hr {
     }
 }
 #map {
-    height: 500px;
+    height: 520px;
     width: 100%;
-    outline: 2px solid coral;
+    position: relative;
+    z-index: 1;
 }
