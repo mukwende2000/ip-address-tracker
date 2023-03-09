@@ -30,10 +30,11 @@ const myIcon = L.icon({
     iconAnchor: [22, 94],
     popupAnchor: [-3, -76],
 });
-L.marker([-13.312656, 25.237033], {
+const marker = L.marker([-13.312656, 25.237033], {
     icon: myIcon,
     draggable: true
-}).addTo(map).bindPopup('A pretty CSS3 popup.<br> Easily customizable.');
+})
+marker.addTo(map).bindPopup('A pretty CSS3 popup.<br> Easily customizable.');
 
 const baseLayers  = {
     "osm": osm,
@@ -45,5 +46,5 @@ L.control.layers(baseLayers).addTo(map)
 
 export default function changeView(lat, lng) {
     map.flyTo([lat, lng], 3.5)
-
+    marker.setLatLng([lat, lng])
 }

@@ -89,3 +89,8 @@ hr {
     position: relative;
     z-index: 1;
 }
+
+.leaflet-control-layers-selector {
+    width: 10px;
+    height: 10px;
+}
