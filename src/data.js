@@ -7,22 +7,22 @@ export default class Data {
         this.timezone = document.querySelector('#timezone')
         this.geonameId = document.querySelector('#geonameid')
         this.isp = document.querySelector('#isp') 
+        this.input = document.querySelector('input')
     }
     
-    getData = async () => {
-        const input = document.querySelector('input')
-        fetch(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_zInYozPmI3GhSyrrEpCGi32ecbICm&ipAddress=${input.value}`)
-            .then((res) => {
-               return res.json()
+    getData = async() => {
+        fetch(`https://geo.ipify.org/api/v2/country,city,vpn?apiKey=at_zInYozPmI3GhSyrrEpCGi32ecbICm&ipAddress=${this.input.value}`)
+            .then((response) => {
+               return response.json()
             })
-            .then(res =>  {
-                this.ipAddress.textContent = res.ip
-                this.country.textContent = `${res.location.country}, `
-                this.geonameId.textContent = res.location.geonameId
-                this.timezone.textContent = res.location.timezone
-                this.isp.textContent = res.isp
+            .then(response =>  {
+                this.ipAddress.textContent = response.ip
+                this.country.textContent = `${response.location.country}, `
+                this.geonameId.textContent = response.location.geonameId
+                this.timezone.textContent = response.location.timezone
+                this.isp.textContent = response.isp
                 
-                changeView(res.location.lat, res.location.lng)
+                changeView(response.location.lat, response.location.lng)
             })
     }
 }
