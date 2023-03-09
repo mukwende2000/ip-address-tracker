@@ -25,14 +25,18 @@ input {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
     border: 1px solid black;
+    width: 22rem;
     height: 50px;
-    padding: 0 1.4rem;
+    padding: 0 1rem;
     font-size: large;
     font-weight: bold;
 }
+input::placeholder {
+    font-weight: lighter;
+}
 input:focus {
-    border: none;
     outline: none;
+    border: 1px solid coral;
 }
 button {
     width: 50px;
